@@ -1,4 +1,4 @@
-//feature branch: expermenting with and gate
+//master branch: expermenting with and gate
 module and_gate(a,b,c,y);
 
  input a,b,c;
