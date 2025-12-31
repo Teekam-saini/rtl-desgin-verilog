@@ -1,10 +1,10 @@
 # Simulation outputs
-*.vcd
-*.vvp
+sim/*.vcd
+sim/*.vvp
 
 # Build artifacts
 build/
 
-# Editors
-*.swp
-*~
+# Editor junk
+.vscode/
+
