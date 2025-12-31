@@ -1,3 +1,4 @@
+//testbench of T flip flop
 module tb_t_ff;
     reg clk, reset, t;
     wire q;
