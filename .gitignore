@@ -1,0 +1,10 @@
+# Simulation outputs
+*.vcd
+*.vvp
+
+# Build artifacts
+build/
+
+# Editors
+*.swp
+*~

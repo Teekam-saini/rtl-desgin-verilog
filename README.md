@@ -24,7 +24,7 @@ This repository contains digital design modules implemented in Verilog for learn
 
 ```bash
 # Compile RTL and Testbench
-iverilog -o sim/and_gate_tb.vvp tb/tb_and_gate.v rtl/gates/and_gate.v
+iverilog -o sim/and_gate.vvp rtl/gates/and_gate.v tb/tb_and_gate.v
 
 # Run simulation
 vvp sim/and_gate_tb.vvp
