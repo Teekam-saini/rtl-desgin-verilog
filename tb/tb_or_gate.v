@@ -1,3 +1,4 @@
+//testbench of or gate
 module tb_or_gate;
 reg a;
 reg b;
