@@ -1,0 +1,224 @@
+$date
+	Mon Feb 23 19:59:08 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_universal_register $end
+$var wire 1 ! so_right $end
+$var wire 1 " so_left $end
+$var wire 8 # po [7:0] $end
+$var parameter 2 $ hold $end
+$var parameter 2 % load $end
+$var parameter 2 & shift_left $end
+$var parameter 2 ' shift_right $end
+$var reg 1 ( clk $end
+$var reg 2 ) mode [1:0] $end
+$var reg 8 * pi [7:0] $end
+$var reg 1 + reset $end
+$var reg 1 , si $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 2 - mode [1:0] $end
+$var wire 8 . pi [7:0] $end
+$var wire 1 + reset $end
+$var wire 1 , si $end
+$var wire 1 ! so_right $end
+$var wire 1 " so_left $end
+$var parameter 2 / hold $end
+$var parameter 2 0 load $end
+$var parameter 2 1 shift_left $end
+$var parameter 2 2 shift_right $end
+$var reg 8 3 po [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 2
+b10 1
+b11 0
+b0 /
+b1 '
+b10 &
+b11 %
+b0 $
+$end
+#0
+$dumpvars
+b0 3
+b0 .
+b0 -
+0,
+1+
+b0 *
+b0 )
+0(
+b0 #
+0"
+0!
+$end
+#5
+1(
+#10
+0(
+0+
+#15
+1(
+#20
+0(
+b11 )
+b11 -
+b10110011 *
+b10110011 .
+#25
+1"
+1!
+b10110011 #
+b10110011 3
+1(
+#30
+0(
+b11111111 *
+b11111111 .
+b0 )
+b0 -
+#35
+1(
+#40
+0(
+#45
+1(
+#50
+0(
+1,
+b1 )
+b1 -
+#55
+b11011001 #
+b11011001 3
+1(
+#60
+0(
+0,
+#65
+0"
+0!
+b1101100 #
+b1101100 3
+1(
+#70
+0(
+1,
+#75
+1"
+b10110110 #
+b10110110 3
+1(
+#80
+0(
+b10110011 *
+b10110011 .
+b11 )
+b11 -
+#85
+1!
+b10110011 #
+b10110011 3
+1(
+#90
+0(
+b10 )
+b10 -
+#95
+0"
+b1100111 #
+b1100111 3
+1(
+#100
+0(
+0,
+#105
+1"
+0!
+b11001110 #
+b11001110 3
+1(
+#110
+0(
+1,
+#115
+1!
+b10011101 #
+b10011101 3
+1(
+#120
+0(
+b11 )
+b11 -
+#125
+b10110011 #
+b10110011 3
+1(
+#130
+0(
+0,
+b1 )
+b1 -
+#135
+0"
+b1011001 #
+b1011001 3
+1(
+#140
+0(
+#145
+0!
+b101100 #
+b101100 3
+1(
+#150
+0(
+#155
+b10110 #
+b10110 3
+1(
+#160
+0(
+#165
+1!
+b1011 #
+b1011 3
+1(
+#170
+0(
+#175
+b101 #
+b101 3
+1(
+#180
+0(
+#185
+0!
+b10 #
+b10 3
+1(
+#190
+0(
+#195
+1!
+b1 #
+b1 3
+1(
+#200
+0(
+#205
+0!
+b0 #
+b0 3
+1(
+#210
+0(
