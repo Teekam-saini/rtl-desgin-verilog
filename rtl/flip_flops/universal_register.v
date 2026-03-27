@@ -1,3 +1,5 @@
+//universal register
+
 module universal_register(
     input wire clk,reset,si,
     input wire [1:0] mode,
@@ -15,7 +17,7 @@ localparam load = 2'b11;
 always @(posedge clk or posedge reset) begin
     if(reset)
     po <= 8'b0;
-    else
+    else 
     case (mode)
         hold: po <= po;
         shift_left: po <= {po[6:0] , si};
