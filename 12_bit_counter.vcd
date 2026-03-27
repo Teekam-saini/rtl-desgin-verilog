@@ -1,0 +1,197 @@
+$date
+	Fri Mar 27 11:32:22 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_12_bit_counter $end
+$var wire 4 ! count [3:0] $end
+$var reg 1 " clk $end
+$var reg 4 # data [3:0] $end
+$var reg 1 $ en $end
+$var reg 1 % load $end
+$var reg 1 & rst $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 4 ' data [3:0] $end
+$var wire 1 $ en $end
+$var wire 1 % load $end
+$var wire 1 & rst $end
+$var reg 4 ( count [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b1000 '
+1&
+0%
+1$
+b1000 #
+0"
+b0 !
+$end
+#5
+1"
+#10
+0"
+0&
+#15
+b1 !
+b1 (
+1"
+#20
+0"
+#25
+b10 !
+b10 (
+1"
+#30
+0"
+#35
+b11 !
+b11 (
+1"
+#40
+0"
+#45
+b100 !
+b100 (
+1"
+#50
+0"
+#55
+b101 !
+b101 (
+1"
+#60
+0"
+#65
+b110 !
+b110 (
+1"
+#70
+0"
+0$
+#75
+1"
+#80
+0"
+#85
+1"
+#90
+0"
+#95
+1"
+#100
+0"
+#105
+1"
+#110
+0"
+#115
+1"
+#120
+0"
+1%
+#125
+b1000 !
+b1000 (
+1"
+#130
+0"
+#135
+1"
+#140
+0"
+#145
+1"
+#150
+0"
+#155
+1"
+#160
+0"
+#165
+1"
+#170
+0"
+0%
+1$
+#175
+b1001 !
+b1001 (
+1"
+#180
+0"
+#185
+b1010 !
+b1010 (
+1"
+#190
+0"
+#195
+b1011 !
+b1011 (
+1"
+#200
+0"
+#205
+b0 !
+b0 (
+1"
+#210
+0"
+#215
+b1 !
+b1 (
+1"
+#220
+0"
+#225
+b10 !
+b10 (
+1"
+#230
+0"
+#235
+b11 !
+b11 (
+1"
+#240
+0"
+#245
+b100 !
+b100 (
+1"
+#250
+0"
+#255
+b101 !
+b101 (
+1"
+#260
+0"
+#265
+b0 !
+b0 (
+1"
+b101 #
+b101 '
+1%
+1&
+#270
+0"
+#275
+1"
+#280
+0"
+#285
+1"
