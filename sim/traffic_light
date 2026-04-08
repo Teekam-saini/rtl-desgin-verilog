@@ -1,0 +1,278 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6074d1857130 .scope module, "tb_traffic_light" "tb_traffic_light" 2 1;
+ .timescale 0 0;
+v0x6074d18afcd0_0 .var "clk", 0 0;
+v0x6074d18afd90_0 .net "green", 0 0, v0x6074d18af740_0;  1 drivers
+v0x6074d18afe60_0 .net "red", 0 0, v0x6074d18af8c0_0;  1 drivers
+v0x6074d18aff60_0 .var "rst", 0 0;
+v0x6074d18b0030_0 .var "timer", 0 0;
+v0x6074d18b0120_0 .net "yellow", 0 0, v0x6074d18afb50_0;  1 drivers
+E_0x6074d18949e0 .event posedge, v0x6074d1894170_0;
+S_0x6074d18572c0 .scope module, "dut" "traffic_light" 2 6, 3 3 0, S_0x6074d1857130;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "timer";
+    .port_info 3 /OUTPUT 1 "red";
+    .port_info 4 /OUTPUT 1 "green";
+    .port_info 5 /OUTPUT 1 "yellow";
+P_0x6074d18835c0 .param/l "GREEN" 1 3 10, C4<01>;
+P_0x6074d1883600 .param/l "RED" 1 3 9, C4<00>;
+P_0x6074d1883640 .param/l "YELLOW" 1 3 11, C4<10>;
+v0x6074d1894170_0 .net "clk", 0 0, v0x6074d18afcd0_0;  1 drivers
+v0x6074d18af660_0 .var "current_state", 1 0;
+v0x6074d18af740_0 .var "green", 0 0;
+v0x6074d18af7e0_0 .var "next_state", 1 0;
+v0x6074d18af8c0_0 .var "red", 0 0;
+v0x6074d18af9d0_0 .net "rst", 0 0, v0x6074d18aff60_0;  1 drivers
+v0x6074d18afa90_0 .net "timer", 0 0, v0x6074d18b0030_0;  1 drivers
+v0x6074d18afb50_0 .var "yellow", 0 0;
+E_0x6074d1894fb0 .event anyedge, v0x6074d18af660_0;
+E_0x6074d187b210 .event anyedge, v0x6074d18af660_0, v0x6074d18afa90_0;
+E_0x6074d1883f60 .event posedge, v0x6074d18af9d0_0, v0x6074d1894170_0;
+    .scope S_0x6074d18572c0;
+T_0 ;
+    %wait E_0x6074d1883f60;
+    %load/vec4 v0x6074d18af9d0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x6074d18af660_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x6074d18af7e0_0;
+    %assign/vec4 v0x6074d18af660_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x6074d18572c0;
+T_1 ;
+    %wait E_0x6074d187b210;
+    %load/vec4 v0x6074d18af660_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.1, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.2, 6;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x6074d18af7e0_0, 0, 2;
+    %jmp T_1.4;
+T_1.0 ;
+    %load/vec4 v0x6074d18afa90_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_1.5, 8;
+    %pushi/vec4 1, 0, 2;
+    %jmp/1 T_1.6, 8;
+T_1.5 ; End of true expr.
+    %pushi/vec4 0, 0, 2;
+    %jmp/0 T_1.6, 8;
+ ; End of false expr.
+    %blend;
+T_1.6;
+    %store/vec4 v0x6074d18af7e0_0, 0, 2;
+    %jmp T_1.4;
+T_1.1 ;
+    %load/vec4 v0x6074d18afa90_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_1.7, 8;
+    %pushi/vec4 2, 0, 2;
+    %jmp/1 T_1.8, 8;
+T_1.7 ; End of true expr.
+    %pushi/vec4 1, 0, 2;
+    %jmp/0 T_1.8, 8;
+ ; End of false expr.
+    %blend;
+T_1.8;
+    %store/vec4 v0x6074d18af7e0_0, 0, 2;
+    %jmp T_1.4;
+T_1.2 ;
+    %load/vec4 v0x6074d18afa90_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_1.9, 8;
+    %pushi/vec4 0, 0, 2;
+    %jmp/1 T_1.10, 8;
+T_1.9 ; End of true expr.
+    %pushi/vec4 2, 0, 2;
+    %jmp/0 T_1.10, 8;
+ ; End of false expr.
+    %blend;
+T_1.10;
+    %store/vec4 v0x6074d18af7e0_0, 0, 2;
+    %jmp T_1.4;
+T_1.4 ;
+    %pop/vec4 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0x6074d18572c0;
+T_2 ;
+    %wait E_0x6074d1894fb0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18af8c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18afb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18af740_0, 0, 1;
+    %load/vec4 v0x6074d18af660_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_2.0, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_2.1, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_2.2, 6;
+    %jmp T_2.3;
+T_2.0 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18af8c0_0, 0, 1;
+    %jmp T_2.3;
+T_2.1 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18afb50_0, 0, 1;
+    %jmp T_2.3;
+T_2.2 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18af740_0, 0, 1;
+    %jmp T_2.3;
+T_2.3 ;
+    %pop/vec4 1;
+    %jmp T_2;
+    .thread T_2, $push;
+    .scope S_0x6074d1857130;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18afcd0_0, 0, 1;
+T_3.0 ;
+    %delay 5, 0;
+    %load/vec4 v0x6074d18afcd0_0;
+    %inv;
+    %store/vec4 v0x6074d18afcd0_0, 0, 1;
+    %jmp T_3.0;
+    %end;
+    .thread T_3;
+    .scope S_0x6074d1857130;
+T_4 ;
+    %vpi_call 2 17 "$dumpfile", "traffic_light.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6074d1857130 {0 0 0};
+    %vpi_call 2 19 "$display", "time | rst | timer |  R | Y | G | state " {0 0 0};
+    %vpi_call 2 20 "$display", "========================================" {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18aff60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18aff60_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6074d18b0030_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 37 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_0x6074d1857130;
+T_5 ;
+    %wait E_0x6074d18949e0;
+    %load/vec4 v0x6074d18af660_0;
+    %cmpi/e 0, 0, 2;
+    %flag_mov 8, 4;
+    %jmp/0 T_5.0, 8;
+    %pushi/vec4 82, 0, 32; draw_string_vec4
+    %pushi/vec4 17732, 0, 16; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/1 T_5.1, 8;
+T_5.0 ; End of true expr.
+    %load/vec4 v0x6074d18af660_0;
+    %cmpi/e 1, 0, 2;
+    %flag_mov 9, 4;
+    %jmp/0 T_5.2, 9;
+    %pushi/vec4 4674117, 0, 32; draw_string_vec4
+    %pushi/vec4 17742, 0, 16; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/1 T_5.3, 9;
+T_5.2 ; End of true expr.
+    %load/vec4 v0x6074d18af660_0;
+    %cmpi/e 2, 0, 2;
+    %flag_mov 10, 4;
+    %jmp/0 T_5.4, 10;
+    %pushi/vec4 1497713740, 0, 32; draw_string_vec4
+    %pushi/vec4 20311, 0, 16; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/1 T_5.5, 10;
+T_5.4 ; End of true expr.
+    %pushi/vec4 1970170735, 0, 32; draw_string_vec4
+    %pushi/vec4 30574, 0, 16; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/0 T_5.5, 10;
+ ; End of false expr.
+    %blend;
+T_5.5;
+    %jmp/0 T_5.3, 9;
+ ; End of false expr.
+    %blend;
+T_5.3;
+    %jmp/0 T_5.1, 8;
+ ; End of false expr.
+    %blend;
+T_5.1;
+    %vpi_call 2 42 "$display", "%4t | %b | %b | %b | %b | %b | %s | ", $time, v0x6074d18aff60_0, v0x6074d18b0030_0, v0x6074d18afe60_0, v0x6074d18b0120_0, v0x6074d18afd90_0, S<0,vec4,u48> {1 0 0};
+    %jmp T_5;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb/tb_traffic_light.v";
+    "rtl/flip_flops/traffic_light.v";
