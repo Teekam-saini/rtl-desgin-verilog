@@ -52,14 +52,14 @@ initial begin
     
     enable=1'b0;
 
-    in = 3'b000; check(8'b00000001,9);
-    in = 3'b001; check(8'b00000010,10);
-    in = 3'b010; check(8'b00000100,11);
-    in = 3'b011; check(8'b00001000,12);
-    in = 3'b100; check(8'b00010000,13);
-    in = 3'b101; check(8'b00100000,14);
-    in = 3'b110; check(8'b01000000,15);
-    in = 3'b111; check(8'b10000000,16);
+    in = 3'b000; check(8'b00000000,9);
+    in = 3'b001; check(8'b00000000,10);
+    in = 3'b010; check(8'b00000000,11);
+    in = 3'b011; check(8'b00000000,12);
+    in = 3'b100; check(8'b00000000,13);
+    in = 3'b101; check(8'b00000000,14);
+    in = 3'b110; check(8'b00000000,15);
+    in = 3'b111; check(8'b00000000,16);
 
     $display("---------------------");
     $display("total %d passed , %d failed",pass_count,fail_count);
