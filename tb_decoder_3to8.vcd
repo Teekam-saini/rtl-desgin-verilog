@@ -1,0 +1,150 @@
+$date
+	Wed Jun 17 11:10:28 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_decoder_3to8 $end
+$var wire 8 ! out [7:0] $end
+$var reg 1 " enable $end
+$var reg 3 # in [2:0] $end
+$var integer 32 $ fail_count [31:0] $end
+$var integer 32 % pass_count [31:0] $end
+$scope module dut $end
+$var wire 1 " enable $end
+$var wire 3 & in [2:0] $end
+$var reg 8 ' out [7:0] $end
+$upscope $end
+$scope task check $end
+$var reg 8 ( expected_out [7:0] $end
+$var reg 36 ) test_num [35:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 )
+b1 (
+b1 '
+b0 &
+b0 %
+b0 $
+b0 #
+1"
+b1 !
+$end
+#1
+b10 !
+b10 '
+b10 )
+b10 (
+b1 #
+b1 &
+b1 %
+#2
+b100 !
+b100 '
+b11 )
+b100 (
+b10 #
+b10 &
+b10 %
+#3
+b1000 !
+b1000 '
+b100 )
+b1000 (
+b11 #
+b11 &
+b11 %
+#4
+b10000 !
+b10000 '
+b101 )
+b10000 (
+b100 #
+b100 &
+b100 %
+#5
+b100000 !
+b100000 '
+b110 )
+b100000 (
+b101 #
+b101 &
+b101 %
+#6
+b1000000 !
+b1000000 '
+b111 )
+b1000000 (
+b110 #
+b110 &
+b110 %
+#7
+b10000000 !
+b10000000 '
+b1000 )
+b10000000 (
+b111 #
+b111 &
+b111 %
+#8
+b0 !
+b0 '
+b1001 )
+b1 (
+b0 #
+b0 &
+0"
+b1000 %
+#9
+b1010 )
+b10 (
+b1 #
+b1 &
+b1 $
+#10
+b1011 )
+b100 (
+b10 #
+b10 &
+b10 $
+#11
+b1100 )
+b1000 (
+b11 #
+b11 &
+b11 $
+#12
+b1101 )
+b10000 (
+b100 #
+b100 &
+b100 $
+#13
+b1110 )
+b100000 (
+b101 #
+b101 &
+b101 $
+#14
+b1111 )
+b1000000 (
+b110 #
+b110 &
+b110 $
+#15
+b10000 )
+b10000000 (
+b111 #
+b111 &
+b111 $
+#16
+b1000 $
