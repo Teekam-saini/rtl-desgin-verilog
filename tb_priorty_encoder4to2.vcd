@@ -1,0 +1,188 @@
+$date
+	Fri Jun 19 12:05:52 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_priorty_encoder4to2 $end
+$var wire 1 ! valid $end
+$var wire 2 " out [1:0] $end
+$var reg 1 # enable $end
+$var reg 4 $ in [3:0] $end
+$var integer 32 % fail_count [31:0] $end
+$var integer 32 & pass_count [31:0] $end
+$var integer 32 ' total_count [31:0] $end
+$scope module dut $end
+$var wire 1 # enable $end
+$var wire 4 ( in [3:0] $end
+$var reg 2 ) out [1:0] $end
+$var reg 1 ! valid $end
+$upscope $end
+$scope task check $end
+$var reg 2 * expected [1:0] $end
+$var reg 1 + expected_valid $end
+$var integer 32 , test_num [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 ,
+0+
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+1#
+b0 "
+0!
+$end
+#1000
+1!
+b10 ,
+1+
+b1 $
+b1 (
+b1 &
+b1 '
+#2000
+b1 "
+b1 )
+1!
+b11 ,
+b1 *
+b10 $
+b10 (
+b10 &
+b10 '
+#3000
+1!
+b10 "
+b10 )
+b100 ,
+b10 *
+b100 $
+b100 (
+b11 &
+b11 '
+#4000
+1!
+b11 "
+b11 )
+b101 ,
+b11 *
+b1000 $
+b1000 (
+b100 &
+b100 '
+#5000
+1!
+b1 "
+b1 )
+b110 ,
+b1 *
+b11 $
+b11 (
+b101 &
+b101 '
+#6000
+1!
+b10 "
+b10 )
+b111 ,
+b10 *
+b111 $
+b111 (
+b110 &
+b110 '
+#7000
+1!
+b11 "
+b11 )
+b1000 ,
+b11 *
+b1001 $
+b1001 (
+b111 &
+b111 '
+#8000
+1!
+b11 "
+b11 )
+b1001 ,
+b1111 $
+b1111 (
+b1000 &
+b1000 '
+#9000
+0!
+b0 "
+b0 )
+b1010 ,
+0+
+b0 *
+b0 $
+b0 (
+0#
+b1001 &
+b1001 '
+#10000
+b1011 ,
+b1 $
+b1 (
+b1010 &
+b1010 '
+#11000
+b1100 ,
+b10 $
+b10 (
+b1011 &
+b1011 '
+#12000
+b1101 ,
+b100 $
+b100 (
+b1100 &
+b1100 '
+#13000
+b1110 ,
+b1000 $
+b1000 (
+b1101 &
+b1101 '
+#14000
+b1111 ,
+b11 $
+b11 (
+b1110 &
+b1110 '
+#15000
+b10000 ,
+b111 $
+b111 (
+b1111 &
+b1111 '
+#16000
+b10001 ,
+b1001 $
+b1001 (
+b10000 &
+b10000 '
+#17000
+b10010 ,
+b1111 $
+b1111 (
+b10001 &
+b10001 '
+#18000
+b10010 &
+b10010 '
