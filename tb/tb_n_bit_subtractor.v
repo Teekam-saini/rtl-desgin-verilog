@@ -1,4 +1,4 @@
-module tb_tb_n_bit_subtractor;
+module tb_n_bit_subtractor;
  parameter width =4;
 
  reg[width-1:0] a,b;
@@ -36,7 +36,7 @@ begin
 
 initial begin
     $dumpfile("n_bit_subtractor.vcd");
-    $dumpvars(0, tb_tb_n_bit_subtractor);
+    $dumpvars(0, tb_n_bit_subtractor);
 end
 
 initial begin
