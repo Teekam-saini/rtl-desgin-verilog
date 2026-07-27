@@ -1,6 +1,7 @@
 # Simulation outputs
 sim/*.vcd
 sim/*.vvp
+sim/*
 *.vcd
 # Build artifacts
 build/
