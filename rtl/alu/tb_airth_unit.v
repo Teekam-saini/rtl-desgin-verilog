@@ -32,7 +32,7 @@ module tb_airth_unit;
         input [width-1:0] exp_result;
         input exp_c;
         input exp_v;
-        input [64:0] test_name;
+        input [159:0] test_name;
 
         begin
 
