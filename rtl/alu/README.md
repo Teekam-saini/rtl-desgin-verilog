@@ -42,7 +42,7 @@ multiplexes the result based on the decoded opcode.
 
 ## Yosys Schematic
 
-`![ALU Schematic](synth/alu_schematic.png)`
+![ALU Schematic](synth/alu_schematic.png)
 
 *(Insert the PNG generated via `dot -Tpng synth/alu_schematic.dot -o synth/alu_schematic.png`
 into the repo and confirm this path renders before publishing.)*
