@@ -1,4 +1,4 @@
-module tb_airth_unit;
+module tb_arith_unit;
 
     parameter width = 8;
 
@@ -11,7 +11,7 @@ module tb_airth_unit;
 
 
 
-    airth_unit #(.width(width)) dut (
+    arith_unit #(.width(width)) dut (
         .a(a),
         .b(b),
         .is_sub(is_sub),
@@ -158,7 +158,7 @@ module tb_airth_unit;
     end
     initial begin
         $dumpfile("airth_unit.vcd");
-        $dumpvars(0,tb_airth_unit);
+        $dumpvars(0,tb_arith_unit);
         
     end
 
