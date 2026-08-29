@@ -1,0 +1,3 @@
+read_verilog /home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/*.v
+write_verilog -noattr arithmetic_netlist.v
+stat

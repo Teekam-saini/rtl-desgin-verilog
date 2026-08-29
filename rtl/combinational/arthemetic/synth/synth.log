@@ -1,0 +1,94 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `synth.ys' --
+
+1. Executing Verilog-2005 frontend: /home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_adder.v
+Parsing Verilog input from `/home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_adder.v' to AST representation.
+Generating RTLIL representation for module `\n_bit_adder'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_comprater.v
+Parsing Verilog input from `/home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_comprater.v' to AST representation.
+Generating RTLIL representation for module `\n_bit_comprater'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_subtractor.v
+Parsing Verilog input from `/home/teekam/rtl-desgin-verilog/rtl/combinational/arthemetic/n_bit_subtractor.v' to AST representation.
+Generating RTLIL representation for module `\n_bit_subtractor'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog backend.
+
+4.1. Executing BMUXMAP pass.
+
+4.2. Executing DEMUXMAP pass.
+Dumping module `\n_bit_adder'.
+Dumping module `\n_bit_comprater'.
+Dumping module `\n_bit_subtractor'.
+
+5. Printing statistics.
+
+=== n_bit_adder ===
+
+   Number of wires:                  8
+   Number of wire bits:             29
+   Number of public wires:           6
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     $add                            2
+
+=== n_bit_comprater ===
+
+   Number of wires:                  8
+   Number of wire bits:             14
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     $eq                             1
+     $gt                             1
+     $lt                             1
+
+=== n_bit_subtractor ===
+
+   Number of wires:                  9
+   Number of wire bits:             33
+   Number of public wires:           5
+   Number of public wire bits:      18
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     $add                            2
+     $not                            2
+
+End of script. Logfile hash: a6d0ba30ef, CPU: user 0.01s system 0.01s, MEM: 9.02 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 51% 4x read_verilog (0 sec), 20% 1x clean_zerowidth (0 sec), ...

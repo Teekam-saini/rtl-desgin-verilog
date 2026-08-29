@@ -1,0 +1,10 @@
+read_verilog ~/rtl-desgin-verilog/rtl/alu/arith_unit.v
+read_verilog ~/rtl-desgin-verilog/rtl/alu/logic_unit.v
+read_verilog ~/rtl-desgin-verilog/rtl/alu/shift_unit.v
+read_verilog ~/rtl-desgin-verilog/rtl/alu/alu.v
+
+synth -top alu
+
+write_verilog -noattr ~/rtl-desgin-verilog/rtl/alu/synth/alu_netlist.v
+
+start
