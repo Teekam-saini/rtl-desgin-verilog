@@ -1031,4 +1031,113 @@ Found and reported 0 problems.
 6.1. Executing BMUXMAP pass.
 
 6.2. Executing DEMUXMAP pass.
-ERROR: No such command: start (type 'help' for a command overview)
+Dumping module `$paramod\arith_unit\width=s32'00000000000000000000000000001000'.
+Dumping module `$paramod\logic_unit\width=s32'00000000000000000000000000001000'.
+Dumping module `$paramod\shift_unit\width=s32'00000000000000000000000000001000'.
+Dumping module `\alu'.
+
+7. Printing statistics.
+
+=== $paramod\arith_unit\width=s32'00000000000000000000000000001000 ===
+
+   Number of wires:                 63
+   Number of wire bits:             92
+   Number of public wires:           8
+   Number of public wire bits:      37
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 65
+     $_ANDNOT_                      15
+     $_MUX_                          1
+     $_NOR_                          6
+     $_NOT_                          5
+     $_ORNOT_                        6
+     $_OR_                           7
+     $_XNOR_                        10
+     $_XOR_                         15
+
+=== $paramod\logic_unit\width=s32'00000000000000000000000000001000 ===
+
+   Number of wires:                150
+   Number of wire bits:            173
+   Number of public wires:           4
+   Number of public wire bits:      27
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                154
+     $_ANDNOT_                      58
+     $_AND_                         26
+     $_NAND_                         8
+     $_NOR_                          8
+     $_NOT_                          1
+     $_ORNOT_                        3
+     $_OR_                          42
+     $_XNOR_                         7
+     $_XOR_                          1
+
+=== $paramod\shift_unit\width=s32'00000000000000000000000000001000 ===
+
+   Number of wires:                  4
+   Number of wire bits:             18
+   Number of public wires:           4
+   Number of public wire bits:      18
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  9
+     $_ANDNOT_                       1
+     $_AND_                          1
+     $_MUX_                          7
+
+=== alu ===
+
+   Number of wires:                113
+   Number of wire bits:            160
+   Number of public wires:          15
+   Number of public wire bits:      62
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                116
+     $_ANDNOT_                      63
+     $_AND_                          3
+     $_MUX_                          2
+     $_NAND_                         2
+     $_NOR_                          8
+     $_ORNOT_                       11
+     $_OR_                          24
+     $paramod\arith_unit\width=s32'00000000000000000000000000001000      1
+     $paramod\logic_unit\width=s32'00000000000000000000000000001000      1
+     $paramod\shift_unit\width=s32'00000000000000000000000000001000      1
+
+=== design hierarchy ===
+
+   alu                               1
+     $paramod\arith_unit\width=s32'00000000000000000000000000001000      1
+     $paramod\logic_unit\width=s32'00000000000000000000000000001000      1
+     $paramod\shift_unit\width=s32'00000000000000000000000000001000      1
+
+   Number of wires:                330
+   Number of wire bits:            443
+   Number of public wires:          31
+   Number of public wire bits:     144
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                341
+     $_ANDNOT_                     137
+     $_AND_                         30
+     $_MUX_                         10
+     $_NAND_                        10
+     $_NOR_                         22
+     $_NOT_                          6
+     $_ORNOT_                       20
+     $_OR_                          73
+     $_XNOR_                        17
+     $_XOR_                         16
+
+End of script. Logfile hash: 1c885a6aa4, CPU: user 0.38s system 0.04s, MEM: 15.35 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 50% 1x abc (0 sec), 13% 17x opt_expr (0 sec), ...

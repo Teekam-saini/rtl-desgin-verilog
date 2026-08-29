@@ -7,4 +7,4 @@ synth -top alu
 
 write_verilog -noattr ~/rtl-desgin-verilog/rtl/alu/synth/alu_netlist.v
 
-start
+stat
