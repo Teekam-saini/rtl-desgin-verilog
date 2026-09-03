@@ -7,32 +7,7 @@ verified with a self-checking testbench, and synthesized through Yosys.
 
 ## Architecture
 
-```
-                         ┌─────────────────────────────┐
-                         │            alu.v             │
-                         │        (top-level ALU)       │
-                         │                               │
-    a[WIDTH-1:0]  ─────► │                               │
-    b[WIDTH-1:0]  ─────► │   ┌───────────────────────┐   │
-    opcode[3:0]   ─────► │   │      arith_unit.v      │   │
-                         │   │  ADD, SUB, CMP         │   │──► result[WIDTH-1:0]
-                         │   └───────────────────────┘   │
-                         │                               │──► Z (zero)
-                         │   ┌───────────────────────┐   │──► N (negative)
-                         │   │      logic_unit.v      │   │──► C (carry)
-                         │   │  AND, OR, XOR, XNOR,   │   │──► V (overflow)
-                         │   │  NAND, NOR, NOT        │   │
-                         │   └───────────────────────┘   │
-                         │                               │
-                         │   ┌───────────────────────┐   │
-                         │   │      shift_unit.v      │   │
-                         │   │  SHL, SHR              │   │
-                         │   └───────────────────────┘   │
-                         │                               │
-                         │   opcode-driven output mux    │
-                         │   selects active sub-unit      │
-                         └─────────────────────────────┘
-```
+![alu block digram](synth/alu_block.png)
 
 Each functional unit (`arith_unit`, `logic_unit`, `shift_unit`) is a standalone,
 independently testable Verilog module. `alu.v` instantiates all three and
